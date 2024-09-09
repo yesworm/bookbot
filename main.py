@@ -23,13 +23,10 @@ def create_report(text):
     word_count = count_words(text)
     char_count = count_characters(text)
 
-    # Convert char_count dictionary to list of dictionaries
     char_list = [{"char": char, "num": count} for char, count in char_count.items()]
     
-    # Sort the list by count in descending order
     char_list.sort(reverse=True, key=sort_on)
 
-    # Print the report
     print(f"--- Begin report of books/frankenstein.txt ---")
     print(f"{word_count} words found in the document")
     print()
